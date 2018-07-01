@@ -17,7 +17,7 @@ $ npm install -g backslide
 
 ### Setting Github Pages
 Settings > Options > GitHub Pages > Source:
-- master branch 
+- master branch /docs folder
 
 
 ## Quick Start
