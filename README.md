@@ -20,6 +20,14 @@ Settings > Options > GitHub Pages > Source:
 - master branch 
 
 
+## Quick Start
+```
+$ mkdir -p docs/20180709-hogefuga; cd $_
+$ bs i
+$ bs s
+```
+
+
 ## Usage
 See also: [Backslide Presentations with a kick](https://sinedied.github.io/backslide/#1)
 
