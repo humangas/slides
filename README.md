@@ -1,0 +1,25 @@
+# slides
+My slides  
+
+## Setup
+### Install backslide
+- [backslide](https://github.com/sinedied/backslide): CLI tool for making HTML presentations with Remark.js using Markdown 
+
+```
+# Required python v2.7 for build node-gyp 
+# See also: https://github.com/nodejs/node-gyp#on-macos
+$ pyenv install 2.7.15
+$ pyenv shell 2.7.15
+
+# Install backslide
+$ npm install -g backslide
+```
+
+### Setting Github Pages
+Settings > Options > GitHub Pages > Source:
+- master branch 
+
+
+## Usage
+See also: [Backslide Presentations with a kick](https://sinedied.github.io/backslide/#1)
+
