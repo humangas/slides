@@ -305,6 +305,7 @@ Mandatory arguments to long options are mandatory for short options too.
 1. ワンライナーでインストール: .small[`$ curl -sL https://hoge/install | bash`]
 1. インストール後の管理: .small[`setup list, version, tags`]
 1. インストール後の管理: .small[`setup install, upgrade, config`]
+1. [自作ツールはhomebrew化](https://github.com/humangas/homebrew-apps)
 1. [最後にドキュメント化する](https://humangas.github.io/dotfiles/)
 
 .right[
