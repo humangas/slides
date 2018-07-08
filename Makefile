@@ -19,10 +19,25 @@ list:
 	done
 
 html:
+ifdef NAME
+	@if [ ! -e "docs/$(NAME)" ]; then \
+		echo "Error: docs/$(NAME) is not exists"; \
+		exit 1; \
+	else \
+		cd docs/$(NAME); \
+		echo $(NAME); \
+		bs e; \
+		mv dist/presentation.html index.html; \
+		rmdir dist; \
+	fi
+else
 	@for v in `ls docs`; do \
 		cd docs/$$v; \
+		echo $$v; \
 		bs e; \
 		mv dist/presentation.html index.html; \
 		rmdir dist; \
 		cd ../..; \
 	done
+endif
+
