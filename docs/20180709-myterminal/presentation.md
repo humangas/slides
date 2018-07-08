@@ -1,5 +1,6 @@
 title: my terminal
 class: animation-fade
+background-color: #F1F0EE
 layout: true
 
 <!-- This slide will serve as the base layout for all your slides -->
