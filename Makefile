@@ -8,8 +8,15 @@ help:
 	@echo "Usage: make [target]"
 	@echo ""
 	@echo "target:"
+	@echo " - list:    List presentations."
 	@echo " - html:    Export presentation.md under docs directory to html using backslide."
 	@echo ""
+
+list:
+	@cd docs;
+	@for v in `ls docs`; do \
+		echo $$v; \
+	done
 
 html:
 	@for v in `ls docs`; do \
