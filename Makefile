@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-.PHONY: all help html
+.PHONY: all help list html pdf 
 
 all:
 
@@ -10,6 +10,7 @@ help:
 	@echo "target:"
 	@echo " - list:    List presentations."
 	@echo " - html:    Export presentation.md under docs directory to html using backslide."
+	@echo " - pdf:     Export presentation.md under docs directory to pdf using backslide."
 	@echo ""
 
 list:
@@ -41,3 +42,25 @@ else
 	done
 endif
 
+pdf:
+ifdef NAME
+	@if [ ! -e "docs/$(NAME)" ]; then \
+		echo "Error: docs/$(NAME) is not exists"; \
+		exit 1; \
+	else \
+		cd docs/$(NAME); \
+		echo $(NAME); \
+		bs p; \
+		mv pdf/presentation.pdf .; \
+		rmdir pdf; \
+	fi
+else
+	@for v in `ls docs`; do \
+		cd docs/$$v; \
+		echo $$v; \
+		bs p; \
+		mv pdf/presentation.pdf .; \
+		rmdir pdf; \
+		cd ../..; \
+	done
+endif
